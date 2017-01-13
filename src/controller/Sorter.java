@@ -11,12 +11,17 @@ public class Sorter {
     private String month;
     private String year;
     private String imageDate;
+    private File sortedDirectory;
 
     public Sorter(File imageFile, String imageDate) {
 
         this.imageFile = imageFile;
         this.imageDate = imageDate;
 
+    }
+
+    public File getSortedDirectory() {
+        return sortedDirectory;
     }
 
     public String getMonth() {
@@ -35,6 +40,16 @@ public class Sorter {
         this.year = this.imageDate.substring(5,7);
     }
 
+    public File createSortedFolder(){
+
+        this.sortedDirectory = new File(imageFile.getParentFile().getPath() +"/" + year + "/" + month);
+        if(sortedDirectory.mkdir())
+        {
+            System.out.println("Directory created!");
+        }
+
+        return sortedDirectory;
+    }
 
 
 
