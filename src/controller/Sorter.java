@@ -12,6 +12,13 @@ public class Sorter {
     private String year;
     private String imageDate;
 
+    public Sorter(File imageFile, String imageDate) {
+
+        this.imageFile = imageFile;
+        this.imageDate = imageDate;
+
+    }
+
     public String getMonth() {
         return month;
     }
@@ -20,19 +27,18 @@ public class Sorter {
         return year;
     }
 
-    public Sorter(File imageFile, String imageDate) {
-
-        this.imageFile = imageFile;
-        this.imageDate = imageDate;
-
+    public void setMonth(String month) {
+        this.month = this.imageDate.substring(5,7);
     }
 
-    public void extractMonth(){
-
+    public void setYear(String year) {
+        this.year = this.imageDate.substring(5,7);
     }
 
-    public void extractYear(){
 
-    }
+
+
+
+
 
 }
