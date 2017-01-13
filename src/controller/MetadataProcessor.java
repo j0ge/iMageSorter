@@ -9,6 +9,10 @@ public class MetadataProcessor {
 
     private String metadataDate;
 
+    public String getMetadataDate() {
+        return metadataDate;
+    }
+
     public MetadataProcessor() {
 
     }
