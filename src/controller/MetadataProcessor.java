@@ -7,22 +7,26 @@ import java.io.*;
  */
 public class MetadataProcessor {
 
+    private String metadataDate;
+
+    public MetadataProcessor() {
+
+    }
 
 
-    public String readMetadata(File imageFile)  {
-
-        String metadataDate = null;
+    public String readMetadata(File imageFile) {
 
         // Starting Exiftool, which is used for Reading Metadata
         try {
-            Process exifTool = new ProcessBuilder("C:/Users/jgerlich/Desktop/exiftool.exe","-s", "-S", "-createdate",
+
+            Process exifTool = new ProcessBuilder("C:/Users/jgerlich/Desktop/exiftool.exe", "-s", "-S", "-createdate",
                     "-filecreatedate", imageFile.getAbsolutePath()).start();
 
             exifTool.waitFor();
 
             InputStream inputExiftool = exifTool.getInputStream();
             BufferedReader br = new BufferedReader(new InputStreamReader(inputExiftool));
-            metadataDate= br.readLine();
+            metadataDate = br.readLine();
 
         } catch (IOException e) {
             e.printStackTrace();
