@@ -18,27 +18,27 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" text="Bilder Suchen">
+                        <Button fx:id="searchPictures" mnemonicParsing="false" text="Bilder Suchen">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
                            <HBox.margin>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                              <Insets left="5.0" right="5.0" />
                            </HBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Sortieren">
+                        <Button fx:id="sort" mnemonicParsing="false" text="Sortieren">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
                            <HBox.margin>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                              <Insets left="5.0" right="5.0" />
                            </HBox.margin>
                         </Button>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" text="Bildansicht leeren" />
+                        <Button fx:id="clearImageView" mnemonicParsing="false" text="Bildansicht leeren" />
                      </children>
                      <VBox.margin>
                         <Insets />
