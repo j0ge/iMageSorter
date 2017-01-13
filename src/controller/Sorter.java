@@ -8,6 +8,18 @@ import java.io.File;
 public class Sorter {
 
     private File imageFile;
+    private String month;
+    private String year;
+
+    public String getMonth() {
+        return month;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+
 
     public Sorter(File imageFile) {
 
