@@ -11,6 +11,8 @@ public class MetadataProcessor {
 
     public String readMetadata(File imageFile)  {
 
+        String metadataDate = null;
+
         // Starting Exiftool, which is used for Reading Metadata
         try {
             Process exifTool = new ProcessBuilder("C:/Users/jgerlich/Desktop/exiftool.exe","-s", "-S", "-createdate",
@@ -20,7 +22,7 @@ public class MetadataProcessor {
 
             InputStream inputExiftool = exifTool.getInputStream();
             BufferedReader br = new BufferedReader(new InputStreamReader(inputExiftool));
-            System.out.println(br.readLine());
+            metadataDate= br.readLine();
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -29,6 +31,6 @@ public class MetadataProcessor {
         }
 
 
-        return null;
+        return metadataDate;
     }
 }
