@@ -1,6 +1,7 @@
 package view;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
@@ -20,13 +21,8 @@ public class Main extends Application {
         primaryStage.centerOnScreen();
         primaryStage.getIcons().add(new Image("/img/camera.png"));
 
-        Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
-
+        primaryStage.setMaximized(true);
         primaryStage.setScene(new Scene(root));
-        primaryStage.setX(primaryScreenBounds.getMinX());
-        primaryStage.setY(primaryScreenBounds.getMinY());
-        primaryStage.setWidth(primaryScreenBounds.getWidth());
-        primaryStage.setHeight(primaryScreenBounds.getHeight());
         primaryStage.show();
     }
 
