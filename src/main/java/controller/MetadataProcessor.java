@@ -7,17 +7,27 @@ import java.io.*;
  */
 public class MetadataProcessor {
 
+    // attributes
     private String metadataDate;
 
+    // getter
     public String getMetadataDate() {
         return metadataDate;
     }
 
+    // constructor
     public MetadataProcessor() {
 
     }
 
+    // methods
 
+    /**
+     * this method is reading metadata from an image using exiftool
+     *
+     * @param imageFile Current Image from which metadata is getting extracted
+     * @return returns a String containing the extracted metadata
+     */
     public String readMetadata(File imageFile) {
 
         // Starting Exiftool, which is used for Reading Metadata
@@ -37,7 +47,6 @@ public class MetadataProcessor {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
 
         return metadataDate;
     }
