@@ -32,20 +32,21 @@ public class Sorter {
         return year;
     }
 
-    public void setMonth(String month) {
-        this.month = this.imageDate.substring(5,7);
-    }
-
-    public void setYear(String year) {
-        this.year = this.imageDate.substring(5,7);
-    }
 
     public File createSortedFolder(){
 
+        this.year = this.imageDate.substring(0,4);
+        this.month = this.imageDate.substring(5,7);
         this.sortedDirectory = new File(imageFile.getParentFile().getPath() +"/" + year + "/" + month);
-        if(sortedDirectory.mkdir())
+
+        System.out.println(this.sortedDirectory.getPath());
+
+        if(sortedDirectory.mkdirs())
         {
             System.out.println("Directory created!");
+        }
+        else {
+            System.out.println("Directory already exists!");
         }
 
         return sortedDirectory;
