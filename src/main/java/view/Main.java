@@ -14,7 +14,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("design.fxml"));
         primaryStage.setTitle("Image Sorter");
         primaryStage.centerOnScreen();
-        primaryStage.getIcons().add(new Image("/img/camera.png"));
+        primaryStage.getIcons().add(new Image("camera.png"));
 
         primaryStage.setMaximized(true);
         primaryStage.setScene(new Scene(root));
