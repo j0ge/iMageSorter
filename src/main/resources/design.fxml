@@ -13,11 +13,11 @@
 <?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
    <children>
       <BorderPane layoutX="208.0" layoutY="90.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
-            <VBox alignment="CENTER" prefHeight="400.0" prefWidth="163.0" BorderPane.alignment="CENTER">
+            <VBox alignment="CENTER" prefHeight="370.0" prefWidth="192.0" BorderPane.alignment="CENTER">
                <children>
                   <HBox alignment="CENTER" prefHeight="82.0" prefWidth="163.0">
                      <children>
@@ -28,9 +28,9 @@
                         </Button>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="126.0" prefWidth="163.0">
+                  <HBox alignment="CENTER" prefHeight="126.0" prefWidth="153.0">
                      <children>
-                        <Button fx:id="searchPictures" mnemonicParsing="false" text="Bilder Suchen">
+                        <Button fx:id="searchPictures" mnemonicParsing="false" onAction="#searchforPictures" text="Bilder Suchen">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
@@ -38,7 +38,7 @@
                               <Insets left="5.0" right="5.0" />
                            </HBox.margin>
                         </Button>
-                        <Button fx:id="sort" mnemonicParsing="false" text="Sortieren">
+                        <Button fx:id="sort" mnemonicParsing="false" onAction="#sortPictures" text="Sortieren">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
